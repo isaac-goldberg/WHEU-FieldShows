@@ -31,7 +31,11 @@
     margin: 0 auto;
 }
 .player-container .player .placeholder {
-    width: 8%;
+    width: 20%;
+    background-color: transparent;
+}
+.player-container .player .endPlaceholder {
+    width: 10%;
     background-color: transparent;
 }
 .player-container .player .videoDetails p {
@@ -58,7 +62,7 @@
     float: left;
 }
 .player-container .player .videoDetails ul li {
-    margin-left: 20px;
+    margin-left: 40px;
     padding-left: 1.3em;
 }
 

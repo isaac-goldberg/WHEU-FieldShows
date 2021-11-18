@@ -64,29 +64,19 @@ function addVideoSection(title, type) {
 
         var placeholder = document.createElement("div");
         placeholder.classList = "placeholder";
+        var endPlaceholder = document.createElement("div");
+        endPlaceholder.classList = "endPlaceholder";
         
         var videoElem = document.createElement("iframe");
         videoElem.setAttributes({
             src: video.source,
-            width: 640,
-            height: 480,
+            // width: 640,
+            // height: 480,
+            width: 900,
+            height: 600,
             allow: "autoplay",
             allowfullscreen: true,
-        })
-        // var videoElem = document.createElement("video");
-        // videoElem.setAttributes({
-        //     controls: "true",
-        //     preload: "auto",
-        //     width: "auto",
-        //     height: "600px",
-        //     poster: `assets/images/${video.source}.png`,
-        //     "data-setup": "{}",
-        // })
-        // videoElem.classList = "video-js";
-        // videoElem.id = video.id;
-        // var source = document.createElement("source");
-        // source.setAttribute("src", `assets/videos/${video.source + (video.extension ? `.${video.extension}` : ".mp4")}`);
-        // videoElem.appendChild(source);
+        });
         
         var details = document.createElement("div");
         details.classList = "videoDetails";
@@ -109,6 +99,7 @@ function addVideoSection(title, type) {
         player.appendChild(placeholder);
         player.appendChild(videoElem);
         player.appendChild(details);
+        player.appendChild(endPlaceholder);
 
         // append elems to container
         playerContainer.appendChild(collapseBtn);
