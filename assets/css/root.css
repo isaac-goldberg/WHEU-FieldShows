@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Product Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Product\ Sans/Product\ Sans\ Bold.ttf");
+}
+@font-face {
+    font-family: "Venus Rising";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Venus\ Rising/Venus\ Rising\ Regular.ttf");
+}
+
+:root {
+    --theme-text-primary: #FFD700;
+    --theme-text-primary-hover: #c2a500;
+    --theme-text-primary-shadow: 5px 0px 17px #CE9E00;
+    --theme-background: #222;
+    --theme-border: #633a00;
+    --theme-border-shadow-hex: #331D00;
+    --theme-border-shadow: 0px 0px 19px 7px var(--theme-border-shadow-hex);
+}
+
+* {
+    outline: none !important;
+}
+
+body {
+    background-color: var(--theme-background) !important;
+
+    color: var(--theme-text-primary) !important;
+    text-align: center !important;
+    font-family: "Product Sans", sans-serif !important;
+
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: "Product Sans", sans-serif;
+    letter-spacing: .4px;
+    font-size: 48px;
+    padding-top: 20px;
+}
+
+.banner {
+    margin-top: 15px;
+    font-family: "Venus Rising", sans-serif;
+    font-size: 75px;
+    font-style: italic;
+    text-shadow: var(--theme-text-primary-shadow);
+}
+.banner span {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.banner::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid var(--theme-border);
+    margin-top: 20px;
+    box-shadow: var(--theme-border-shadow);
+}
+
+.credits {
+    margin-top: 10rem !important;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px 0 10px 0;
+    font-size: 12px;
+    color: #c4a800 !important;
+}
+.credits a {
+    color: #c4a800 !important;
+    transition: .1s ease;
+}
+.credits a:hover {
+    color: #917c00 !important;
+}
