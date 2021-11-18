@@ -1,0 +1,112 @@
+.videos-header {
+    margin-top: 25px;
+}
+
+/* player at all times */
+.player-container {
+    margin: 25px 25px;
+    padding: 20px;
+    transition: .2s ease;
+    background-color: #333;
+    border-radius: 25px;
+    outline: none !important;
+    user-select: none !important;
+}
+
+.player-container .collapseBtn {
+    cursor: pointer;
+    width: fit-content;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.player-container .collapseBtn i {
+    margin-left: 30px;
+    transition: .2s ease;
+}
+
+.player-container .player {
+    margin-top: 20px !important;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.player-container .player .placeholder {
+    width: 20%;
+    background-color: transparent;
+}
+.player-container .player .endPlaceholder {
+    width: 10%;
+    background-color: transparent;
+}
+.player-container .player .videoDetails p {
+    display: inline;
+}
+
+.player-container .player .video-js {
+    flex: auto;
+}
+.player-container .player .video-js video {
+    background-color: #222;
+}
+.player-container .player .video-js .vjs-poster {
+    width: fit-content !important;
+}
+.player-container .player .videoDetails {
+    flex: 20%;
+    width: fit-content;
+}
+.player-container .player .videoDetails ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    float: left;
+}
+.player-container .player .videoDetails ul li {
+    margin-left: 40px;
+    padding-left: 1.3em;
+}
+
+.player-container .player .videoDetails ul li a {
+    text-decoration: none;
+    color: var(--theme-text-primary);
+    transition: .1s ease;
+}
+
+.player-container .player .videoDetails ul li a:hover {
+    color: var(--theme-text-primary-hover);
+}
+.player-container .player .videoDetails ul li span::before {
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.player-container .player .videoDetails ul li span.icon-location::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";
+}
+.player-container .player .videoDetails ul li span.icon-score::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f005";
+    margin-left: -1.4em !important;
+    margin-right: 4px;
+}
+.player-container .player .videoDetails ul li span.icon-date::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f783";
+}
+
+/* player shown */
+.player-container .collapseBtn[aria-expanded="true"] i {
+    transform: rotate(-180deg);
+}
+
+/* video.js changes */
+.video-js .vjs-time-control,
+.video-js .vjs-current-time .vjs-current-time-display,
+.video-js .vjs-duration .vjs-duration-display {
+    display: block !important;
+}
+.video-js .vjs-remaining-time {
+    display: none !important;
+}
